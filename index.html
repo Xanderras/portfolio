@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Computer Science & IoT Developer</title>
+    <meta
+      name="description"
+      content="Portfolio van een Computer Science afgestudeerde en IoT ontwikkelaar"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">Portfolio</span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link" data-nl="Home" data-en="Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-nl="Over Mij" data-en="About">Over Mij</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link" data-nl="Vaardigheden" data-en="Skills"
+              >Vaardigheden</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" data-nl="Projecten" data-en="Projects"
+              >Projecten</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link" data-nl="Ervaring" data-en="Experience"
+              >Ervaring</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-nl="Contact" data-en="Contact">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="language-toggle" id="language-toggle" title="Switch language">
+            <span class="flag-icon">🇳🇱</span>
+            <span class="lang-text">EN</span>
+          </button>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="greeting" data-nl="Hallo, ik ben" data-en="Hello, I'm">Hallo, ik ben</span>
+            <span class="name">Xander Rasschaert</span>
+          </h1>
+          <div class="typing-container">
+            <span class="typing-text" id="typing-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p
+            class="hero-description"
+            data-nl="Gedreven developer uit Wetteren die de brug slaat tussen software en hardware. Van web development naar IoT innovatie - ik combineer praktische ervaring met een onuitputtelijke nieuwsgierigheid naar technologie. Klaar om in 2027 de tech-wereld te veroveren!"
+            data-en="Passionate developer from Wetteren bridging software and hardware. From web development to IoT innovation - I combine hands-on experience with insatiable curiosity about technology. Ready to conquer the tech world in 2027!"
+          >
+            Gedreven developer uit Wetteren die de brug slaat tussen software en hardware. Van web development naar IoT innovatie - ik combineer praktische ervaring met een onuitputtelijke nieuwsgierigheid naar technologie. Klaar om in 2027 de tech-wereld te veroveren!
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <span data-nl="Bekijk Mijn Werk" data-en="View My Work">Bekijk Mijn Werk</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span data-nl="Neem Contact Op" data-en="Get In Touch">Neem Contact Op</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="assets/images/profile.jpg" alt="Profile Picture" id="profile-img" />
+            </div>
+            <div class="floating-icons">
+              <div class="floating-icon" style="--delay: 0s"><i class="fab fa-js-square"></i></div>
+              <div class="floating-icon" style="--delay: 1s"><i class="fab fa-react"></i></div>
+              <div class="floating-icon" style="--delay: 2s"><i class="fab fa-python"></i></div>
+              <div class="floating-icon" style="--delay: 3s"><i class="fas fa-microchip"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-nl="Over Mij" data-en="About Me">Over Mij</h2>
+          <p
+            class="section-subtitle"
+            data-nl="Mijn reis in de technologie wereld"
+            data-en="My journey in the technology world"
+          >
+            Mijn reis in de technologie wereld
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="text-block">
+              <h3 data-nl="Mijn Achtergrond" data-en="My Background">Mijn Achtergrond</h3>
+              <p
+                data-nl="Ik ben afgestudeerd in de bachelor opleiding Toegepaste Informatica – Web en App Development (HoGent, 2023). Tijdens mijn studies groeide mijn interesse in technologie, data en elektronica, wat me ertoe bracht om aan de slag te gaan als student Data Analist bij LegalFly."
+                data-en="I graduated with a bachelor's degree in Applied Computer Science – Web and App Development (HoGent, 2023). During my studies, my interest in technology, data and electronics grew, which led me to work as a student Data Analyst at LegalFly."
+              >
+                Ik ben afgestudeerd in de bachelor opleiding Toegepaste Informatica – Web en App Development (HoGent, 2023). Tijdens mijn studies groeide mijn interesse in technologie, data en elektronica, wat me ertoe bracht om aan de slag te gaan als student Data Analist bij LegalFly.
+              </p>
+            </div>
+            <div class="text-block">
+              <h3 data-nl="Huidige Focus" data-en="Current Focus">Huidige Focus</h3>
+              <p
+                data-nl="Na mijn bachelor begon ik aan de masteropleiding Industrieel Ingenieur – Elektronica-ICT aan de KU Leuven campus Gent. Na twee jaar in het schakeltraject merkte ik echter dat mijn sterkte vooral ligt in een praktijkgerichte aanpak. Daarom heb ik ervoor gekozen om over te stappen naar de professionele bacheloropleiding Elektronica-ICT, met afstudeerrichting IoT Developer."
+                data-en="After my bachelor's degree, I started the master's program in Industrial Engineering – Electronics-ICT at KU Leuven campus Ghent. After two years in the bridging program, however, I noticed that my strength lies mainly in a practice-oriented approach. That's why I chose to switch to the professional bachelor's program in Electronics-ICT, with specialization IoT Developer."
+              >
+                Na mijn bachelor begon ik aan de masteropleiding Industrieel Ingenieur – Elektronica-ICT aan de KU Leuven campus Gent. Na twee jaar in het schakeltraject merkte ik echter dat mijn sterkte vooral ligt in een praktijkgerichte aanpak. Daarom heb ik ervoor gekozen om over te stappen naar de professionele bacheloropleiding Elektronica-ICT, met afstudeerrichting IoT Developer.
+              </p>
+            </div>
+            <div class="text-block">
+              <h3 data-nl="Wat Maakt Mij Anders" data-en="What Makes Me Different">
+                Wat Maakt Mij Anders
+              </h3>
+              <p
+                data-nl="Naast mijn studies ben ik actief als webmaster bij studentenvereniging MEGA, een rol die ik momenteel voor het tweede jaar vervul. Binnen het jeugdwerk heb ik ruime ervaring als hoofdanimator én instructeur bij Kazou, waar ik zowel kampen begeleid als nieuwe animatoren opleid. Bij Scouts Prins Boudewijn was ik drie jaar leiding, en ik was mede-oprichter en twee jaar bestuurslid van Jeugdhuis SOCK in Wetteren."
+                data-en="In addition to my studies, I am active as webmaster at student association MEGA, a role I currently fulfill for the second year. Within youth work, I have extensive experience as head animator and instructor at Kazou, where I both guide camps and train new animators. At Scouts Prins Boudewijn I was a leader for three years, and I was co-founder and board member for two years of Youth Center SOCK in Wetteren."
+              >
+                Naast mijn studies ben ik actief als webmaster bij studentenvereniging MEGA, een rol die ik momenteel voor het tweede jaar vervul. Binnen het jeugdwerk heb ik ruime ervaring als hoofdanimator én instructeur bij Kazou, waar ik zowel kampen begeleid als nieuwe animatoren opleid. Bij Scouts Prins Boudewijn was ik drie jaar leiding, en ik was mede-oprichter en twee jaar bestuurslid van Jeugdhuis SOCK in Wetteren.
+              </p>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number" data-count="4">0</div>
+              <div class="stat-label" data-nl="Jaar Ervaring" data-en="Years Experience">
+                Jaar Ervaring
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="15">0</div>
+              <div class="stat-label" data-nl="Projecten Voltooid" data-en="Projects Completed">
+                Projecten Voltooid
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="10">0</div>
+              <div class="stat-label" data-nl="Technologieën" data-en="Technologies">
+                Technologieën
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-nl="Vaardigheden" data-en="Skills">Vaardigheden</h2>
+          <p
+            class="section-subtitle"
+            data-nl="Technologieën waar ik mee werk"
+            data-en="Technologies I work with"
+          >
+            Technologieën waar ik mee werk
+          </p>
+        </div>
+        <div class="skills-content">
+          <div class="skills-categories">
+            <div class="skill-category">
+              <h3
+                class="category-title"
+                data-nl="Frontend Development"
+                data-en="Frontend Development"
+              >
+                Frontend Development
+              </h3>
+              <div class="skills-list">
+                <div class="skill-item" data-skill="90">
+                  <div class="skill-info">
+                    <span class="skill-name">HTML5 & CSS3</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="85">
+                  <div class="skill-info">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percentage">85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="80">
+                  <div class="skill-info">
+                    <span class="skill-name">React</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 80%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="75">
+                  <div class="skill-info">
+                    <span class="skill-name">Vue.js</span>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3
+                class="category-title"
+                data-nl="Backend Development"
+                data-en="Backend Development"
+              >
+                Backend Development
+              </h3>
+              <div class="skills-list">
+                <div class="skill-item" data-skill="85">
+                  <div class="skill-info">
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-percentage">85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="80">
+                  <div class="skill-info">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percentage">80%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 80%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="75">
+                  <div class="skill-info">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 75%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="70">
+                  <div class="skill-info">
+                    <span class="skill-name">MySQL</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3 class="category-title" data-nl="IoT & Hardware" data-en="IoT & Hardware">
+                IoT & Hardware
+              </h3>
+              <div class="skills-list">
+                <div class="skill-item" data-skill="75">
+                  <div class="skill-info">
+                    <span class="skill-name">Arduino</span>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 75%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="70">
+                  <div class="skill-info">
+                    <span class="skill-name">Raspberry Pi</span>
+                    <span class="skill-percentage">70%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="65">
+                  <div class="skill-info">
+                    <span class="skill-name">C++</span>
+                    <span class="skill-percentage">65%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 65%"></div>
+                  </div>
+                </div>
+                <div class="skill-item" data-skill="60">
+                  <div class="skill-info">
+                    <span class="skill-name">MQTT</span>
+                    <span class="skill-percentage">60%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="--width: 60%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tech-icons">
+            <div class="tech-icon" title="JavaScript"><i class="fab fa-js-square"></i></div>
+            <div class="tech-icon" title="React"><i class="fab fa-react"></i></div>
+            <div class="tech-icon" title="Vue.js"><i class="fab fa-vuejs"></i></div>
+            <div class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i></div>
+            <div class="tech-icon" title="Python"><i class="fab fa-python"></i></div>
+            <div class="tech-icon" title="PHP"><i class="fab fa-php"></i></div>
+            <div class="tech-icon" title="Git"><i class="fab fa-git-alt"></i></div>
+            <div class="tech-icon" title="GitHub"><i class="fab fa-github"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-nl="Projecten" data-en="Projects">Projecten</h2>
+          <p
+            class="section-subtitle"
+            data-nl="Enkele van mijn recente werken"
+            data-en="Some of my recent work"
+          >
+            Enkele van mijn recente werken
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/project-mega.png" alt="MEGA" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://mega.skghendt.be/" class="project-link" title="Live Demo" target="_blank"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                  <a href="https://github.com/MEGA-Odisee/website" class="project-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3
+                class="project-title"
+                data-nl="MEGA - Studentenvereniging Platform"
+                data-en="MEGA - Student Association Platform"
+              >
+                MEGA - Studentenvereniging Platform
+              </h3>
+              <p
+                class="project-description"
+                data-nl="Een volledig web platform ontwikkeld voor mijn studentenvereniging MEGA als webmaster. Het platform biedt uitgebreide functionaliteiten voor leden, evenementen, activiteiten en verenigingsbeheer."
+                data-en="A complete web platform developed for my student association MEGA as webmaster. The platform offers extensive functionalities for members, events, activities and association management."
+              >
+                Een volledig web platform ontwikkeld voor mijn studentenvereniging MEGA als webmaster. Het platform biedt uitgebreide functionaliteiten voor leden, evenementen, activiteiten en verenigingsbeheer.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-cta">
+          <a href="#" class="btn btn-primary">
+            <span data-nl="Meer Projecten Bekijken" data-en="View More Projects"
+              >Meer Projecten Bekijken</span
+            >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-nl="Ervaring" data-en="Experience">Ervaring</h2>
+          <p
+            class="section-subtitle"
+            data-nl="Mijn professionele reis"
+            data-en="My professional journey"
+          >
+            Mijn professionele reis
+          </p>
+        </div>
+        <div id="timeline-container">
+          <!-- Timeline will be dynamically generated here -->
+          <div class="loading-placeholder">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span data-nl="Ervaring wordt geladen..." data-en="Loading experience...">Ervaring wordt geladen...</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-nl="Contact" data-en="Contact">Contact</h2>
+          <p
+            class="section-subtitle"
+            data-nl="Laten we in contact komen"
+            data-en="Let's get in touch"
+          >
+            Laten we in contact komen
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>xander.ras001@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Telefoon</h4>
+                <p>+32 474 32 05 33</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4 data-nl="Locatie" data-en="Location">Locatie</h4>
+                <p data-nl="Wetteren, België" data-en="Wetteren, Belgium">Wetteren, België</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/xander-rasschaert-06673223a/" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" id="name" required />
+              <label for="name" data-nl="Naam" data-en="Name">Naam</label>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" required />
+              <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" id="subject" required />
+              <label for="subject" data-nl="Onderwerp" data-en="Subject">Onderwerp</label>
+            </div>
+            <div class="form-group">
+              <textarea name="message" id="message" rows="6" required></textarea>
+              <label for="message" data-nl="Bericht" data-en="Message">Bericht</label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <span data-nl="Verstuur Bericht" data-en="Send Message">Verstuur Bericht</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section class="cv-download">
+      <div class="container">
+        <div class="cv-content">
+          <h3 data-nl="Download Mijn CV" data-en="Download My CV">Download Mijn CV</h3>
+          <p
+            data-nl="Krijg een gedetailleerd overzicht van mijn ervaring en vaardigheden"
+            data-en="Get a detailed overview of my experience and skills"
+          >
+            Krijg een gedetailleerd overzicht van mijn ervaring en vaardigheden
+          </p>
+          <a href="assets/documents/CV-XanderRasschaert.pdf" class="btn btn-primary cv-btn" download>
+            <i class="fas fa-download"></i>
+            <span data-nl="Download CV (PDF)" data-en="Download CV (PDF)">Download CV (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>
+            &copy; 2024 Portfolio.
+            <span data-nl="Alle rechten voorbehouden" data-en="All rights reserved"
+              >Alle rechten voorbehouden</span
+            >.
+          </p>
+          <p data-nl="Gemaakt met ❤️ en veel koffie" data-en="Made with ❤️ and lots of coffee">
+            Gemaakt met ❤️ en veel koffie
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/managers/DataManager.js"></script>
+    <script src="js/components/Timeline.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

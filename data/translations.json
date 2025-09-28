@@ -1,0 +1,81 @@
+{
+  "ui": {
+    "navigation": {
+      "home": { "nl": "Home", "en": "Home" },
+      "about": { "nl": "Over Mij", "en": "About" },
+      "skills": { "nl": "Vaardigheden", "en": "Skills" },
+      "projects": { "nl": "Projecten", "en": "Projects" },
+      "experience": { "nl": "Ervaring", "en": "Experience" },
+      "contact": { "nl": "Contact", "en": "Contact" }
+    },
+    "buttons": {
+      "viewWork": { "nl": "Bekijk Mijn Werk", "en": "View My Work" },
+      "getInTouch": { "nl": "Neem Contact Op", "en": "Get In Touch" },
+      "showMore": { "nl": "Toon Meer Ervaring", "en": "Show More Experience" },
+      "showLess": { "nl": "Toon Minder Ervaring", "en": "Show Less Experience" },
+      "viewMoreProjects": { "nl": "Meer Projecten Bekijken", "en": "View More Projects" },
+      "sendMessage": { "nl": "Verstuur Bericht", "en": "Send Message" },
+      "downloadCV": { "nl": "Download CV (PDF)", "en": "Download CV (PDF)" }
+    },
+    "hero": {
+      "greeting": { "nl": "Hallo, ik ben", "en": "Hello, I'm" },
+      "description": {
+        "nl": "Gedreven developer uit Wetteren die de brug slaat tussen software en hardware. Van web development naar IoT innovatie - ik combineer praktische ervaring met een onuitputtelijke nieuwsgierigheid naar technologie. Klaar om in 2027 de tech-wereld te veroveren!",
+        "en": "Passionate developer from Wetteren bridging software and hardware. From web development to IoT innovation - I combine hands-on experience with insatiable curiosity about technology. Ready to conquer the tech world in 2027!"
+      }
+    },
+    "sections": {
+      "about": {
+        "title": { "nl": "Over Mij", "en": "About Me" },
+        "subtitle": { "nl": "Mijn reis in de technologie wereld", "en": "My journey in the technology world" },
+        "backgroundTitle": { "nl": "Mijn Achtergrond", "en": "My Background" },
+        "currentFocusTitle": { "nl": "Huidige Focus", "en": "Current Focus" },
+        "whatMakesDifferentTitle": { "nl": "Wat Maakt Mij Anders", "en": "What Makes Me Different" }
+      },
+      "skills": {
+        "title": { "nl": "Vaardigheden", "en": "Skills" },
+        "subtitle": { "nl": "Technologieën waar ik mee werk", "en": "Technologies I work with" }
+      },
+      "projects": {
+        "title": { "nl": "Projecten", "en": "Projects" },
+        "subtitle": { "nl": "Enkele van mijn recente werken", "en": "Some of my recent work" }
+      },
+      "experience": {
+        "title": { "nl": "Ervaring", "en": "Experience" },
+        "subtitle": { "nl": "Mijn professionele reis", "en": "My professional journey" }
+      },
+      "contact": {
+        "title": { "nl": "Contact", "en": "Contact" },
+        "subtitle": { "nl": "Laten we in contact komen", "en": "Let's get in touch" }
+      }
+    },
+    "contact": {
+      "email": { "nl": "Email", "en": "Email" },
+      "phone": { "nl": "Telefoon", "en": "Phone" },
+      "location": { "nl": "Locatie", "en": "Location" },
+      "locationValue": { "nl": "Wetteren, België", "en": "Wetteren, Belgium" }
+    },
+    "form": {
+      "name": { "nl": "Naam", "en": "Name" },
+      "email": { "nl": "Email", "en": "Email" },
+      "subject": { "nl": "Onderwerp", "en": "Subject" },
+      "message": { "nl": "Bericht", "en": "Message" }
+    },
+    "stats": {
+      "experience": { "nl": "Jaar Ervaring", "en": "Years Experience" },
+      "projects": { "nl": "Projecten Voltooid", "en": "Projects Completed" },
+      "technologies": { "nl": "Technologieën", "en": "Technologies" }
+    },
+    "cv": {
+      "title": { "nl": "Download Mijn CV", "en": "Download My CV" },
+      "description": {
+        "nl": "Krijg een gedetailleerd overzicht van mijn ervaring en vaardigheden",
+        "en": "Get a detailed overview of my experience and skills"
+      }
+    },
+    "footer": {
+      "copyright": { "nl": "Alle rechten voorbehouden", "en": "All rights reserved" },
+      "madeWith": { "nl": "Gemaakt met ❤️ en veel koffie", "en": "Made with ❤️ and lots of coffee" }
+    }
+  }
+}

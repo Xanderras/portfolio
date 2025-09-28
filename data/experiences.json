@@ -1,0 +1,229 @@
+{
+  "experiences": [
+    {
+      "id": "odisee-2025",
+      "type": "education",
+      "startDate": "2025-09",
+      "endDate": "current",
+      "displayDate": {
+        "nl": "Sep 2025 - Heden",
+        "en": "Sep 2025 - Current"
+      },
+      "organization": {
+        "name": "Odisee - Technologie Campus Gent",
+        "url": "https://www.odisee.be/opleidingen/bachelor-elektronica-ict",
+        "logo": "assets/images/logos/odisee-logo.png"
+      },
+      "position": {
+        "nl": "Bachelor Electronics ICT - IoT Developer",
+        "en": "Bachelor Electronics ICT - IoT Developer"
+      },
+      "description": {
+        "nl": "Praktijkgerichte opleiding die perfect aansluit bij mijn ambitie. Focus op IoT technologieën, hardware programming, sensor netwerken en embedded systemen. Deze overstap naar de praktische kant van technologie vormt de ideale voorbereiding op mijn carrière.",
+        "en": "Practice-oriented education that perfectly matches my ambition. Focus on IoT technologies, hardware programming, sensor networks and embedded systems. This switch to the practical side of technology provides ideal career preparation."
+      },
+      "priority": 1,
+      "visible": true
+    },
+    {
+      "id": "legalfly-current",
+      "type": "work",
+      "startDate": "2025-06",
+      "endDate": "current",
+      "displayDate": {
+        "nl": "Jun 2025 - Heden",
+        "en": "Jun 2025 - Current"
+      },
+      "organization": {
+        "name": "LegalFly",
+        "url": "https://www.legalfly.com/",
+        "logo": "assets/images/logos/legalfly-logo.jpeg"
+      },
+      "position": {
+        "nl": "Student Data Analyst",
+        "en": "Student Data Analyst"
+      },
+      "description": {
+        "nl": "Student job als data analyst waarbij ik help met het analyseren van data van het platform dat LegalFly ontwikkelt. Praktijkervaring met data-analyse, databases en business intelligence in een innovatieve legaltech startup.",
+        "en": "Student job as data analyst helping to analyze data from the platform that LegalFly is developing. Hands-on experience with data analysis, databases and business intelligence in an innovative legaltech startup."
+      },
+      "priority": 2,
+      "visible": true
+    },
+    {
+      "id": "kazou-2018",
+      "type": "volunteer",
+      "startDate": "2018",
+      "endDate": "current",
+      "displayDate": {
+        "nl": "2018 - Heden",
+        "en": "2018 - Current"
+      },
+      "organization": {
+        "name": "Kazou",
+        "url": "https://www.kazou.be/",
+        "logo": "assets/images/logos/kazou-logo.png"
+      },
+      "position": {
+        "nl": "Animator, Hoofdanimator & Instructeur",
+        "en": "Animator, Head Animator & Instructor"
+      },
+      "description": {
+        "nl": "Verantwoordelijk voor het begeleiden van kampen en het opleiden van nieuwe animatoren. Combineer leidinggevende vaardigheden met praktijkervaring in groepsmanagement en educatie.",
+        "en": "Responsible for guiding camps and training new animators. Combine leadership skills with practical experience in group management and education."
+      },
+      "priority": 3,
+      "visible": true
+    },
+    {
+      "id": "mega-2023",
+      "type": "volunteer",
+      "startDate": "2023",
+      "endDate": "current",
+      "displayDate": {
+        "nl": "2023 - Heden",
+        "en": "2023 - current"
+      },
+      "organization": {
+        "name": "MEGA - Studentenvereniging",
+        "url": "https://mega.skghendt.be/",
+        "logo": "assets/images/logos/mega-logo.png"
+      },
+      "position": {
+        "nl": "Webmaster",
+        "en": "Webmaster"
+      },
+      "description": {
+        "nl": "Twee jaar lang verantwoordelijk geweest voor de volledige ontwikkeling en onderhoud van het MEGA platform. Van concept tot implementatie van een volledig ledenbeheer-, evenementen- en communicatieplatform met PHP, Vue.js en SQL.",
+        "en": "Responsible for two years for the complete development and maintenance of the MEGA platform. From concept to implementation of a complete member management, events and communication platform using PHP, Vue.js and SQL."
+      },
+      "priority": 4,
+      "visible": true
+    },
+    {
+      "id": "kuleuven-2023",
+      "type": "education",
+      "startDate": "2023-09",
+      "endDate": "2025-06",
+      "displayDate": {
+        "nl": "Sep 2023 - Jun 2025",
+        "en": "Sep 2023 - Jun 2025"
+      },
+      "organization": {
+        "name": "KU Leuven - Technologie Campus Gent",
+        "url": "https://www.kuleuven.be/opleidingen/master-industriele-wetenschappen-elektronica-ict/schakelprogramma",
+        "logo": "assets/images/logos/kuleuven-logo.jpg"
+      },
+      "position": {
+        "nl": "Industriële Ingenieurswetenschappen Elektronica-ICT",
+        "en": "Industrial Engineering Electronics-ICT"
+      },
+      "description": {
+        "nl": "Tweejarige verdieping in de elektronische kant van ICT aan een van België's meest prestigieuze universiteiten. Deze ervaring bevestigde mijn voorkeur voor praktijkgerichte toepassingen en leidde tot de overstap naar IoT Development.",
+        "en": "Two-year deep dive into the electronics side of ICT at one of Belgium's most prestigious universities. This experience confirmed my preference for practical applications and led to the switch to IoT Development."
+      },
+      "priority": 5,
+      "visible": false
+    },
+    {
+      "id": "sock-2022",
+      "type": "volunteer",
+      "startDate": "2022",
+      "endDate": "2024",
+      "displayDate": {
+        "nl": "2022 - 2024",
+        "en": "2022 - 2024"
+      },
+      "organization": {
+        "name": "Jeugdhuis SOCK, Wetteren",
+        "url": "https://www.jhsock.be/",
+        "logo": "assets/images/logos/sock-logo.jpeg"
+      },
+      "position": {
+        "nl": "Mede-oprichter & Bestuurslid",
+        "en": "Co-founder & Board Member"
+      },
+      "description": {
+        "nl": "Mede-oprichter en twee jaar bestuurslid van Jeugdhuis SOCK in Wetteren. Verantwoordelijk voor de opstart en uitbouw van de werking, evenementenbeheer en strategische planning.",
+        "en": "Co-founder and two-year board member of Youth Center SOCK in Wetteren. Responsible for startup and development of operations, event management and strategic planning."
+      },
+      "priority": 6,
+      "visible": false
+    },
+    {
+      "id": "swiftforarduino-2023",
+      "type": "internship",
+      "startDate": "2023-02",
+      "endDate": "2023-03",
+      "displayDate": {
+        "nl": "Feb 2023 - Mar 2023",
+        "en": "Feb 2023 - Mar 2023"
+      },
+      "organization": {
+        "name": "Swift for Arduino",
+        "url": "https://www.swiftforarduino.com/",
+        "logo": "assets/images/logos/swiftforarduino-logo.jpg"
+      },
+      "position": {
+        "nl": "Stage - IoT Developer",
+        "en": "Internship - IoT Developer"
+      },
+      "description": {
+        "nl": "Meegewerkt aan de ontwikkeling van een innovatieve IDE voor het programmeren van microcontrollers met de Swift programmeertaal. Deze unieke ervaring combineerde mijn software development kennis met hardware programming en gaf mij waardevolle inzichten in embedded systemen.",
+        "en": "Contributed to developing an innovative IDE for programming microcontrollers with the Swift programming language. This unique experience combined my software development knowledge with hardware programming and gave me valuable insights into embedded systems."
+      },
+      "priority": 7,
+      "visible": false
+    },
+    {
+      "id": "hogent-2020",
+      "type": "education",
+      "startDate": "2020-09",
+      "endDate": "2023-06",
+      "displayDate": {
+        "nl": "Sep 2020 - Jun 2023",
+        "en": "Sep 2020 - Jun 2023"
+      },
+      "organization": {
+        "name": "HoGent - Campus Schoonmeersen",
+        "url": "https://www.hogent.be/opleidingen/bachelors/toegepaste-informatica/",
+        "logo": "assets/images/logos/hogent-logo.png"
+      },
+      "position": {
+        "nl": "Bachelor Toegepaste Informatica",
+        "en": "Bachelor Applied Computer Science"
+      },
+      "description": {
+        "nl": "Afgestudeerd in de bachelor opleiding Toegepaste Informatica – Web en App Development. Opbouw van sterke fundamenten in programmeren, databases, UI/UX design en projectmanagement.",
+        "en": "Graduated with a bachelor's degree in Applied Computer Science – Web and App Development. Building strong foundations in programming, databases, UI/UX design and project management."
+      },
+      "priority": 8,
+      "visible": false
+    },
+    {
+      "id": "scouts-2020",
+      "type": "volunteer",
+      "startDate": "2020",
+      "endDate": "2023",
+      "displayDate": {
+        "nl": "2020 - 2023",
+        "en": "2020 - 2023"
+      },
+      "organization": {
+        "name": "Scouts Prins Boudewijn",
+        "url": "https://www.scoutswetteren.be/",
+        "logo": "assets/images/logos/scouts-logo.jpeg"
+      },
+      "position": {
+        "nl": "Scouts Leiding",
+        "en": "Scouts Leader"
+      },
+      "description": {
+        "nl": "Drie jaar actief als leiding bij de lokale scoutsgroep. Ontwikkeling van leiderschapsvaardigheden, groepsdynamiek en organisatie van activiteiten voor jongeren.",
+        "en": "Three years active as leader at the local scout group. Development of leadership skills, group dynamics and organization of activities for young people."
+      },
+      "priority": 9,
+      "visible": false
+    }
+  ]
+}

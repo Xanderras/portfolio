@@ -1,0 +1,77 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Professional portfolio website with live reload development environment",
+  "main": "index.html",
+  "scripts": {
+    "dev": "concurrently \"npm run serve\" \"npm run watch\"",
+    "serve": "live-server --port=3000 --open=/index.html --watch=. --ignore=node_modules --entry-file=index.html",
+    "watch": "chokidar \"**/*.{html,css,js}\" --ignore node_modules -c \"echo File changed: {path} - Reloading...\"",
+    "clean": "rimraf dist",
+    "build": "npm run build:full",
+    "build:full": "npm run clean && npm run build:prepare && npm run build:assets && npm run build:minify && npm run build:html",
+    "build:prepare": "node scripts/build.js prepare",
+    "build:assets": "npm run build:copy && npm run build:images",
+    "build:copy": "copyfiles -u 1 \"data/**/*\" \"assets/**/*\" dist/",
+    "build:images": "echo \"Images copied with assets\"",
+    "build:minify": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o dist/css/style.min.css css/style.css css/animations.css css/responsive.css",
+    "minify-js": "uglifyjs js/managers/DataManager.js js/components/Timeline.js js/language.js js/theme.js js/animations.js js/main.js -c -m -o dist/js/app.min.js",
+    "build:html": "node scripts/build.js html",
+    "build:prod": "npm run build:full && npm run optimize:extra",
+    "optimize:extra": "node scripts/build.js optimize",
+    "lint": "npm run lint-js && npm run lint-css",
+    "lint-js": "eslint js/**/*.js --fix",
+    "lint-css": "stylelint css/*.css --fix",
+    "format": "prettier --write \"**/*.{html,css,js,md}\"",
+    "test": "echo \"No tests specified yet\" && exit 0",
+    "deploy": "npm run build:prod && gh-pages -d dist",
+    "deploy:ready": "npm run build:prod && echo \"✅ Build complete! Upload the 'dist' folder to your hosting provider.\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.2",
+    "clean-css-cli": "^5.6.3",
+    "uglify-js": "^3.17.4",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "eslint": "^8.57.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "prettier": "^3.2.5",
+    "gh-pages": "^6.1.1",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.5",
+    "html-minifier-terser": "^7.2.0",
+    "fs-extra": "^11.2.0"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "frontend",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "glassmorphism"
+  ],
+  "author": "Xander Rasschaert",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio.git"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

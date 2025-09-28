@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Development Helper</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 3rem;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .status {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .status-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border-radius: 8px;
+        background: white;
+      }
+
+      .status-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 14px;
+      }
+
+      .complete {
+        background: #28a745;
+      }
+      .pending {
+        background: #ffc107;
+        color: #333;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: transform 0.2s ease;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      }
+
+      .next-steps {
+        background: #e9ecef;
+        border-radius: 10px;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      .next-steps h3 {
+        margin-bottom: 1rem;
+        color: #495057;
+      }
+
+      .next-steps ul {
+        list-style: none;
+      }
+
+      .next-steps li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .next-steps li:before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚀 Portfolio Development Helper</h1>
+
+      <div class="status">
+        <h2>Project Status</h2>
+        <div class="status-item">
+          <div class="status-icon complete">✓</div>
+          <div>
+            <strong>File Structure Created</strong>
+            <p>All necessary files and folders are in place</p>
+          </div>
+        </div>
+        <div class="status-item">
+          <div class="status-icon complete">✓</div>
+          <div>
+            <strong>HTML Structure</strong>
+            <p>Complete responsive HTML with Dutch/English support</p>
+          </div>
+        </div>
+        <div class="status-item">
+          <div class="status-icon complete">✓</div>
+          <div>
+            <strong>CSS Styling</strong>
+            <p>Modern glassmorphism design with animations</p>
+          </div>
+        </div>
+        <div class="status-item">
+          <div class="status-icon complete">✓</div>
+          <div>
+            <strong>JavaScript Features</strong>
+            <p>Interactive animations, language switching, theme toggle</p>
+          </div>
+        </div>
+        <div class="status-item">
+          <div class="status-icon pending">!</div>
+          <div>
+            <strong>Personal Content</strong>
+            <p>Add your photos, CV, and personal information</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="index.html" class="btn btn-secondary"> 🌐 View Portfolio </a>
+        <button class="btn" onclick="startDevServer()" id="dev-btn">⚡ Start Dev Server</button>
+        <button class="btn" onclick="window.open('setup.md')">📋 Setup Guide</button>
+        <button class="btn" onclick="window.open('dev-start.md')">🔧 Dev Guide</button>
+        <button class="btn" onclick="window.open('README.md')">📖 Documentation</button>
+        <button class="btn" onclick="openFolder()">📁 Open Project Folder</button>
+      </div>
+
+      <div class="next-steps">
+        <h3>Next Steps:</h3>
+        <ul>
+          <li>Add your profile photo to <code>assets/images/profile.jpg</code></li>
+          <li>Update personal information in <code>index.html</code></li>
+          <li>Add your CV to <code>assets/documents/</code></li>
+          <li>Replace project screenshots with your own work</li>
+          <li>Customize colors and content to match your style</li>
+          <li>Test on different devices and browsers</li>
+          <li>Deploy to GitHub Pages or Netlify when ready</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function openFolder() {
+        // This will work on local file system
+        if (typeof window !== 'undefined' && window.location.protocol === 'file:') {
+          alert(
+            'Project folder: ' +
+              window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'))
+          );
+        } else {
+          alert('Open your project folder manually: E:\\Documenten\\Portfolio');
+        }
+      }
+
+      function startDevServer() {
+        const devBtn = document.getElementById('dev-btn');
+        const originalText = devBtn.innerHTML;
+
+        devBtn.innerHTML = '🔄 Starting...';
+        devBtn.disabled = true;
+
+        // Show instructions
+        showDevInstructions();
+
+        setTimeout(() => {
+          devBtn.innerHTML = originalText;
+          devBtn.disabled = false;
+        }, 3000);
+      }
+
+      function showDevInstructions() {
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+                backdrop-filter: blur(5px);
+            `;
+
+        modal.innerHTML = `
+                <div style="
+                    background: white;
+                    border-radius: 15px;
+                    padding: 2rem;
+                    max-width: 500px;
+                    width: 90%;
+                    text-align: center;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                ">
+                    <h3 style="color: #333; margin-bottom: 1rem;">🚀 Start Development Server</h3>
+                    <p style="margin-bottom: 1.5rem; color: #666;">
+                        To start the live development server with auto-reload:
+                    </p>
+                    <div style="
+                        background: #f8f9fa;
+                        border-radius: 8px;
+                        padding: 1rem;
+                        margin: 1rem 0;
+                        font-family: monospace;
+                        border-left: 4px solid #667eea;
+                    ">
+                        <strong>npm run dev</strong>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">
+                        This will start a server at <strong>http://localhost:3000</strong><br>
+                        and automatically reload when you make changes!
+                    </p>
+                    <button onclick="this.parentElement.parentElement.remove()" style="
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        border: none;
+                        padding: 0.75rem 1.5rem;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        font-weight: 500;
+                    ">Got it!</button>
+                </div>
+            `;
+
+        document.body.appendChild(modal);
+
+        modal.addEventListener('click', e => {
+          if (e.target === modal) {
+            modal.remove();
+          }
+        });
+      }
+
+      // Check if portfolio is properly configured
+      function checkConfiguration() {
+        const checks = [
+          { name: 'Profile Image', path: 'assets/images/profile.jpg' },
+          { name: 'CV Document', path: 'assets/documents/CV_*.pdf' },
+          { name: 'Project Images', path: 'assets/images/project*.jpg' },
+        ];
+
+        // This would require server-side checking in a real implementation
+        console.log('Configuration check would happen here');
+      }
+
+      // Auto-check configuration on load
+      document.addEventListener('DOMContentLoaded', checkConfiguration);
+    </script>
+  </body>
+</html>
