@@ -1,7 +1,7 @@
 // Language Management System
 class LanguageManager {
   constructor() {
-    this.currentLanguage = 'nl';
+    this.currentLanguage = 'en';
     this.languages = {
       nl: '🇳🇱',
       en: '🇺🇸',

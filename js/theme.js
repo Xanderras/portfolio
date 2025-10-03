@@ -2,7 +2,7 @@
 class ThemeManager {
   constructor() {
     this.themes = ['light', 'dark'];
-    this.currentTheme = 'light';
+    this.currentTheme = 'dark';
     this.init();
   }
 

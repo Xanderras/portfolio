@@ -1,0 +1,110 @@
+name: Deploy to InfinityFree
+
+# Trigger deployment on push to main branch
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allow manual trigger
+
+# Environment variables for the entire workflow
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  deploy:
+    name: Build and Deploy to InfinityFree
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: 🚀 Checkout Repository
+      uses: actions/checkout@v4
+
+    # Setup Node.js environment
+    - name: 🟢 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    # Install dependencies
+    - name: 📦 Install Dependencies
+      run: npm ci
+
+    # Run linting and formatting checks
+    - name: 🔍 Run Code Quality Checks
+      run: |
+        npm run lint || echo "Linting completed with warnings"
+        npm run format -- --check || echo "Formatting check completed"
+
+    # Build the project
+    - name: 🔨 Build Project
+      run: npm run build:prod
+
+    # Verify build output
+    - name: ✅ Verify Build Output
+      run: |
+        echo "Build directory contents:"
+        ls -la dist/
+        echo "Total build size:"
+        du -sh dist/
+
+    # Deploy to InfinityFree via FTP
+    - name: 🚀 Deploy to InfinityFree
+      env:
+        FTP_HOST: ${{ secrets.FTP_HOST }}
+        FTP_USER: ${{ secrets.FTP_USER }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
+        FTP_PORT: ${{ secrets.FTP_PORT }}
+        FTP_SECURE: ${{ secrets.FTP_SECURE }}
+      run: |
+        echo "🔗 Connecting to FTP server: $FTP_HOST"
+        node scripts/deploy-ftp.js
+
+    # Notify deployment status
+    - name: 📢 Deployment Status
+      if: always()
+      run: |
+        if [ "${{ job.status }}" == "success" ]; then
+          echo "✅ Deployment completed successfully!"
+          echo "🌐 Your site should be live at your InfinityFree domain"
+        else
+          echo "❌ Deployment failed. Check the logs above for details."
+          exit 1
+        fi
+
+  # Optional: Create a deployment artifact for manual inspection
+  create-artifact:
+    name: Create Deployment Artifact
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' # Only for manual triggers
+
+    steps:
+    - name: 🚀 Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: 🟢 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: 📦 Install Dependencies
+      run: npm ci
+
+    - name: 🔨 Build Project
+      run: npm run build:prod
+
+    - name: 📁 Create Deployment Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: portfolio-build-${{ github.sha }}
+        path: dist/
+        retention-days: 30
+
+    - name: 📋 Artifact Info
+      run: |
+        echo "✅ Build artifact created successfully!"
+        echo "📦 Artifact name: portfolio-build-${{ github.sha }}"
+        echo "🕐 Retention: 30 days"

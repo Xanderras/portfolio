@@ -1,0 +1,86 @@
+# FTP Deployment Ignore File
+# Files and directories listed here will be excluded from FTP uploads
+
+# Development Files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Environment & Configuration
+.env*
+!.env.example
+deploy.config.js
+
+# Version Control
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+BUILD.md
+dev-start.md
+setup.md
+*.md
+!dist/**/*.md
+
+# Node.js & Package Management
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+# Build & Scripts
+scripts/
+.github/
+build/
+src/
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Development Tools
+.eslintrc.*
+.prettierrc.*
+.stylelintrc.*
+webpack.config.js
+rollup.config.js
+vite.config.js
+
+# Testing
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+coverage/
+
+# Temporary Files
+*.temp
+*.cache
+
+# OS Generated Files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Archive Files (unless specifically needed)
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Large Files (InfinityFree has file size limits)
+# Uncomment and adjust as needed
+# *.mp4
+# *.mov
+# *.avi
+# files-larger-than-10mb.*

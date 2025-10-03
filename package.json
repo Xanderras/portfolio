@@ -25,7 +25,10 @@
     "lint-css": "stylelint css/*.css --fix",
     "format": "prettier --write \"**/*.{html,css,js,md}\"",
     "test": "echo \"No tests specified yet\" && exit 0",
-    "deploy": "npm run build:prod && gh-pages -d dist",
+    "deploy": "node scripts/deploy-ftp.js",
+    "deploy:ftp": "node scripts/deploy-ftp.js",
+    "deploy:build": "npm run build:prod && echo \"✅ Build complete! Files ready in 'dist' folder\"",
+    "deploy:github": "npm run build:prod && gh-pages -d dist",
     "deploy:ready": "npm run build:prod && echo \"✅ Build complete! Upload the 'dist' folder to your hosting provider.\"",
     "start": "npm run dev"
   },
@@ -47,7 +50,9 @@
     "copyfiles": "^2.4.1",
     "rimraf": "^5.0.5",
     "html-minifier-terser": "^7.2.0",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+    "basic-ftp": "^5.0.5",
+    "dotenv": "^16.4.5"
   },
   "keywords": [
     "portfolio",
