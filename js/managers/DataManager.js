@@ -1,4 +1,5 @@
 // DataManager - Centralized data loading and caching
+/* exported DataManager */
 class DataManager {
   constructor() {
     this.cache = new Map();

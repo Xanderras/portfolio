@@ -113,7 +113,6 @@ class FTPDeployer {
     try {
       this.log(`📁 Ensuring remote directory exists: ${this.config.remoteDir}`);
       await this.client.ensureDir(this.config.remoteDir);
-      await this.client.cd(this.config.remoteDir);
       this.log('Remote directory ready', 'success');
     } catch (error) {
       this.log(`Failed to prepare remote directory: ${error.message}`, 'error');
@@ -128,13 +127,14 @@ class FTPDeployer {
 
       this.log(`📤 Uploading: ${path.basename(localPath)} (${fileSize} KB)`);
 
-      // Ensure parent directory exists before uploading
-      const remoteDir = path.posix.dirname(remotePath);
-      if (remoteDir !== '.') {
-        await this.client.ensureDir(remoteDir);
-      }
+      // Build full remote path from remoteDir
+      const fullRemotePath = path.posix.join(this.config.remoteDir, remotePath);
+      const remoteDir = path.posix.dirname(fullRemotePath);
 
-      await this.client.uploadFrom(localPath, remotePath);
+      // Ensure parent directory exists before uploading
+      await this.client.ensureDir(remoteDir);
+
+      await this.client.uploadFrom(localPath, fullRemotePath);
       this.deploymentStats.uploadedFiles++;
 
     } catch (error) {
@@ -159,7 +159,9 @@ class FTPDeployer {
 
       if (item.isDirectory()) {
         try {
-          await this.client.ensureDir(remotePath);
+          // Build full remote directory path
+          const fullRemoteDir = path.posix.join(this.config.remoteDir, remotePath);
+          await this.client.ensureDir(fullRemoteDir);
           await this.uploadDirectory(localPath, remotePath);
         } catch (error) {
           this.log(`Failed to process directory ${item.name}: ${error.message}`, 'error');

@@ -944,6 +944,8 @@ body {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-medium);
   padding: var(--card-padding);
+  position: relative;
+  padding-right: 6rem;
 }
 
 .timeline-content h3 {
@@ -969,10 +971,6 @@ body {
 }
 
 /* Company and School Logos - Top Right Corner */
-.timeline-content {
-  position: relative;
-  padding-right: 6rem;
-}
 
 .company-logo,
 .school-logo {

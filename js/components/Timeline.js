@@ -1,4 +1,5 @@
 // Timeline Component - Dynamic experience timeline rendering
+/* exported Timeline */
 class Timeline {
   constructor(container, options = {}) {
     this.container = container;
@@ -120,7 +121,6 @@ class Timeline {
   }
 
   toggleExpansion() {
-    const hiddenTimeline = document.getElementById('timeline-hidden');
     const toggleBtn = document.getElementById('timeline-toggle-btn');
     const toggleIcon = document.getElementById('timeline-toggle-icon');
     const btnText = toggleBtn.querySelector('span');
