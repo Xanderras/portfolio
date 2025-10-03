@@ -12,7 +12,7 @@
     "build:full": "npm run clean && npm run build:prepare && npm run build:assets && npm run build:minify && npm run build:html",
     "build:prepare": "node scripts/build.js prepare",
     "build:assets": "npm run build:copy && npm run build:images",
-    "build:copy": "copyfiles \"data/**/*\" dist/ && copyfiles -u 1 \"assets/**/*\" dist/",
+    "build:copy": "copyfiles \"data/**/*\" dist/ && copyfiles \"assets/**/*\" dist/",
     "build:images": "echo \"Images copied with assets\"",
     "build:minify": "npm run minify-css && npm run minify-js",
     "minify-css": "cleancss -o dist/css/style.min.css css/style.css css/animations.css css/responsive.css",
