@@ -128,6 +128,12 @@ class FTPDeployer {
 
       this.log(`📤 Uploading: ${path.basename(localPath)} (${fileSize} KB)`);
 
+      // Ensure parent directory exists before uploading
+      const remoteDir = path.posix.dirname(remotePath);
+      if (remoteDir !== '.') {
+        await this.client.ensureDir(remoteDir);
+      }
+
       await this.client.uploadFrom(localPath, remotePath);
       this.deploymentStats.uploadedFiles++;
 
